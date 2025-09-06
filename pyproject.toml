@@ -1,0 +1,41 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "stats_model"
+version = "0.0.1"
+description = "RadhaKrishna"
+authors = [
+  { name = "Sonu Rathore" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "loguru",
+    "pip",
+    "python-dotenv",
+    "ruff",
+    "tqdm",
+    "typer",
+    "jupyterlab (>=4.4.7,<5.0.0)",
+]
+requires-python = ">=3.11.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["stats_model"]
+include = ["pyproject.toml", "stats_model/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["stats_model"]
+force-sort-within-sections = true
+
