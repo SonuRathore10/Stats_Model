@@ -6,6 +6,16 @@
 
 RadhaKrishna
 
+# Setup:
+Run the `SetYouUp.ipynb` file to get started.
+
+# Running the Project
+0. Run `SetYouUp.ipynb`
+1. Open the project folder in your terminal.
+2. Start Jupyter Lab with `poetry run jupyter lab` or launch Visual Studio Code with `poetry run code .` (ensure VS Code is added to your system PATH to use the latter command).
+3. If using VS Code, select the kernel that matches the project folder name.
+
+
 ## Project Organization
 
 ```

@@ -8,7 +8,10 @@ import requests
 from stats_model.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
 
 app = typer.Typer()
-
+import os
+os.system('poetry update')
+os.system('poetry install')
+os.system('poetry lock')
 def download_from_gdrive(gdrive_url: str, dest_path: Path):
     """
     Download a file from a Google Drive shareable link.
