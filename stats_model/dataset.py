@@ -12,6 +12,12 @@ import os
 os.system('poetry update')
 os.system('poetry install')
 os.system('poetry lock')
+
+
+# Get the absolute path to the project root
+project_root = Path(__file__).resolve().parent.parent
+processed_dir = project_root / 'data' / 'processed'
+processed_dir.mkdir(parents=True, exist_ok=True)
 def download_from_gdrive(gdrive_url: str, dest_path: Path):
     """
     Download a file from a Google Drive shareable link.
