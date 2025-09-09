@@ -45,13 +45,14 @@ def download_from_gdrive(gdrive_url: str, dest_path: Path):
     logger.success(f"File downloaded to: {dest_path}")
 
 @app.command()
+
 def main(
-    input_path: Path = RAW_DATA_DIR / "Extended_Employee_Performance_and_Productivity_Data",
-    output_path: Path = PROCESSED_DATA_DIR / "Extended_Employee_Performance_and_Productivity_Data",
+    input_path: Path = RAW_DATA_DIR / "Life_Expectancy_Data.csv",
+    output_path: Path = PROCESSED_DATA_DIR / "Life_Expectancy_Data.csv",
 ):
     # ---- DOWNLOAD DATASET FROM GOOGLE DRIVE ----
-    gdrive_url = "https://drive.google.com/file/d/15OSDk4ga6VxofUq2FZp3lVYNZ7_2xBmd/view?usp=sharing"
-    dest_path = RAW_DATA_DIR / "Extended_Employee_Performance_and_Productivity_Data"
+    gdrive_url = "https://drive.google.com/file/d/1WliKENZpN40X5VckKajTyBQdRwq3oNuk/view?usp=sharing"
+    dest_path = RAW_DATA_DIR / "Life_Expectancy_Data.csv"
     download_from_gdrive(gdrive_url, dest_path)
     print("Path to dataset file:", dest_path)
     # --------------------------------------------
